@@ -1,14 +1,33 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Button } from './ui/button';
 import { Github, Linkedin, Download, ChevronRight } from 'lucide-react';
 import '../styles/hero.css';
 
 const Hero = ({ isVisible }) => {
+  const nameRef = useRef(null);
+
+  useEffect(() => {
+    if (isVisible && nameRef.current) {
+      const letters = nameRef.current.querySelectorAll('.letter');
+      letters.forEach((letter, index) => {
+        letter.style.animation = `letterSlideIn 0.6s ease-out ${index * 0.1}s forwards`;
+      });
+    }
+  }, [isVisible]);
+
   const scrollToProjects = () => {
     const element = document.querySelector('#projects');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
+  };
+
+  const renderAnimatedName = (name) => {
+    return name.split('').map((char, index) => (
+      <span key={index} className="letter" style={{ display: 'inline-block' }}>
+        {char === ' ' ? '\u00A0' : char}
+      </span>
+    ));
   };
 
   return (
@@ -23,7 +42,9 @@ const Hero = ({ isVisible }) => {
         <div className="hero-content">
           <div className="hero-text">
             <p className="hero-greeting">Hi, I'm</p>
-            <h1 className="hero-name">Naveenkm07</h1>
+            <h1 className="hero-name" ref={nameRef}>
+              {renderAnimatedName('Naveenkm07')}
+            </h1>
             <h2 className="hero-title">
               Computer Science Engineering Student |
               <span className="gradient-text"> Software Engineer</span> |

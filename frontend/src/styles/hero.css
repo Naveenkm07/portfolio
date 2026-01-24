@@ -111,6 +111,28 @@
   margin-bottom: 1rem;
   line-height: 1.1;
   font-family: 'IBM Plex Sans', sans-serif;
+  perspective: 1000px;
+}
+
+.letter {
+  opacity: 0;
+  transform: rotateY(90deg) translateZ(50px);
+  transform-style: preserve-3d;
+}
+
+@keyframes letterSlideIn {
+  0% {
+    opacity: 0;
+    transform: rotateY(90deg) translateZ(50px);
+  }
+  50% {
+    opacity: 1;
+    transform: rotateY(45deg) translateZ(25px);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(0deg) translateZ(0px);
+  }
 }
 
 .hero-title {
