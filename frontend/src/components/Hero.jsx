@@ -1,10 +1,11 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Button } from './ui/button';
 import { Github, Linkedin, Download, ChevronRight } from 'lucide-react';
 import '../styles/hero.css';
 
 const Hero = ({ isVisible }) => {
   const nameRef = useRef(null);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
     if (isVisible && nameRef.current) {
@@ -14,6 +15,17 @@ const Hero = ({ isVisible }) => {
       });
     }
   }, [isVisible]);
+
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      const x = (e.clientX / window.innerWidth - 0.5) * 2;
+      const y = (e.clientY / window.innerHeight - 0.5) * 2;
+      setMousePosition({ x, y });
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
 
   const scrollToProjects = () => {
     const element = document.querySelector('#projects');
@@ -97,7 +109,13 @@ const Hero = ({ isVisible }) => {
           </div>
 
           <div className="hero-image">
-            <div className="image-wrapper">
+            <div 
+              className="image-wrapper"
+              style={{
+                transform: `perspective(1000px) rotateY(${mousePosition.x * 10}deg) rotateX(${-mousePosition.y * 10}deg)`,
+                transition: 'transform 0.1s ease-out'
+              }}
+            >
               <img
                 src="https://customer-assets.emergentagent.com/job_naveen-portfolio-1/artifacts/pwt8ktzx_photo.jpg"
                 alt="Naveen Kumar K M"

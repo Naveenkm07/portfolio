@@ -80,6 +80,8 @@
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
   align-items: center;
+  transform-style: preserve-3d;
+  perspective: 1000px;
 }
 
 .hero-text {
@@ -237,6 +239,8 @@
   position: relative;
   width: 400px;
   height: 400px;
+  transform-style: preserve-3d;
+  transition: transform 0.1s ease-out;
 }
 
 .profile-image {
