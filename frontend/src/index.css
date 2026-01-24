@@ -17,7 +17,7 @@ body {
         "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #0a192f;
+    background-color: #00a8e8;
     color: #8892b0;
 }
 
@@ -32,16 +32,16 @@ code {
 }
 
 ::-webkit-scrollbar-track {
-    background: #0a192f;
+    background: #00a8e8;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #64ffda;
+    background: #00a8e8;
     border-radius: 6px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #00d4ff;
+    background: #00a8e8;
 }
 
 @layer base {
