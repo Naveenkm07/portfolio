@@ -2,6 +2,20 @@
 # START - Testing Protocol - DO NOT EDIT OR REMOVE THIS SECTION
 #====================================================================================================
 
+
+echo "# porti" >> code base
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Naveenkm07/porti.git
+git push -u origin main
+
+
+
+
+
+
 # THIS SECTION CONTAINS CRITICAL TESTING INSTRUCTIONS FOR BOTH AGENTS
 # BOTH MAIN_AGENT AND TESTING_AGENT MUST PRESERVE THIS ENTIRE BLOCK
 
