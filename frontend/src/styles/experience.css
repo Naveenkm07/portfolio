@@ -113,6 +113,22 @@
   color: #64ffda;
 }
 
+.certificate-link {
+  color: #64ffda;
+  transition: all 0.3s ease;
+  padding: 0.25rem;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.certificate-link:hover {
+  color: #00d4ff;
+  background: rgba(100, 255, 218, 0.1);
+  transform: scale(1.1);
+}
+
 .timeline-duration {
   font-size: 0.95rem;
   font-weight: 500;
