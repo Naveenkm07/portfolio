@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from './ui/button';
 import { Menu, X } from 'lucide-react';
+import ThemeToggle from './ThemeToggle';
 import '../styles/header.css';
 
 const Header = () => {
@@ -52,6 +53,7 @@ const Header = () => {
               {item.label}
             </a>
           ))}
+          <ThemeToggle />
           <Button
             onClick={(e) => scrollToSection(e, '#contact')}
             className="contact-btn"
@@ -80,6 +82,7 @@ const Header = () => {
               {item.label}
             </a>
           ))}
+          <ThemeToggle />
           <Button
             onClick={(e) => scrollToSection(e, '#contact')}
             className="mobile-contact-btn"

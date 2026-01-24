@@ -19,6 +19,19 @@ body {
     -moz-osx-font-smoothing: grayscale;
     background-color: #00a8e8;
     color: #8892b0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light theme */
+[data-theme="light"] body {
+    background-color: #f8fafc;
+    color: #1e293b;
+}
+
+/* Dark theme */
+[data-theme="dark"] body {
+    background-color: #0a192f;
+    color: #ccd6f6;
 }
 
 code {
