@@ -118,7 +118,7 @@ const Hero = ({ isVisible }) => {
               }}
             >
               <img
-                src="https://customer-assets.emergentagent.com/job_naveen-portfolio-1/artifacts/pwt8ktzx_photo.jpg"
+                src="/phot.jpg"
                 alt="Naveen Kumar K M"
                 className="profile-image"
               />
