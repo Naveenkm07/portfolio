@@ -43,7 +43,7 @@ const Hero = ({ isVisible }) => {
           <div className="hero-text">
             <p className="hero-greeting">Hi, I'm</p>
             <h1 className="hero-name" ref={nameRef}>
-              {renderAnimatedName('Naveen Kumar K M')}
+              {renderAnimatedName('naveenkm07')}
             </h1>
             <h2 className="hero-title">
               Computer Science Engineering Student |
