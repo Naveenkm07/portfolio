@@ -1,0 +1,78 @@
+/* About Section */
+.about {
+  background-color: #112240;
+  padding: 6rem 2rem;
+}
+
+.about-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.about-content {
+  display: grid;
+  gap: 4rem;
+}
+
+.about-text {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-paragraph {
+  font-size: 1.1rem;
+  color: #8892b0;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.about-highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.highlight-card {
+  background: rgba(10, 25, 47, 0.5);
+  border: 1px solid rgba(100, 255, 218, 0.1);
+  padding: 2rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.highlight-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(100, 255, 218, 0.3);
+  box-shadow: 0 15px 40px rgba(100, 255, 218, 0.15);
+}
+
+.highlight-icon {
+  color: #64ffda;
+  margin-bottom: 1rem;
+}
+
+.highlight-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #ccd6f6;
+  margin-bottom: 0.75rem;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.highlight-description {
+  font-size: 1rem;
+  color: #8892b0;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 4rem 1.5rem;
+  }
+
+  .about-highlights {
+    grid-template-columns: 1fr;
+  }
+}
