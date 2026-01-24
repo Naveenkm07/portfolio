@@ -4,15 +4,6 @@ import { Github, Linkedin, Download, ChevronRight } from 'lucide-react';
 import '../styles/hero.css';
 
 const Hero = ({ isVisible }) => {
-  const handleDownloadResume = () => {
-    const link = document.createElement('a');
-    link.href = 'https://customer-assets.emergentagent.com/job_02d2c9ba-1a61-4d45-a956-567df353c4d3/artifacts/roamwpwl_Resume%20Final%20%282%29.docx';
-    link.download = 'Naveen_Kumar_Resume.docx';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-
   const scrollToProjects = () => {
     const element = document.querySelector('#projects');
     if (element) {
@@ -44,14 +35,15 @@ const Hero = ({ isVisible }) => {
             </p>
 
             <div className="hero-buttons">
-              <Button
-                size="lg"
-                className="primary-btn"
-                onClick={handleDownloadResume}
+              <a
+                href="https://newhorizonindia-my.sharepoint.com/:w:/g/personal/1nh24cs409_newhorizonindia_edu/IQCvkV57HeryQbJGjicy1RCMARCKlCDYu6DKoapb3wbEuBA?e=RvqU3p"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background bg-gradient-to-r from-blue-500 to-green-500 text-white hover:from-blue-600 hover:to-green-600 h-12 px-6 py-2 primary-btn"
               >
-                <Download size={20} />
-                Download Resume
-              </Button>
+                <Download size={20} className="mr-2" />
+                View Resume
+              </a>
               <Button
                 size="lg"
                 variant="outline"
