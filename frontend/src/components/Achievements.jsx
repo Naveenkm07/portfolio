@@ -13,6 +13,13 @@ const Achievements = ({ isVisible }) => {
       color: 'gold',
     },
     {
+      icon: <Trophy size={32} />,
+      title: '2nd Place – Mini Project Competition',
+      description:
+        'Awarded at New Horizon College of Engineering for the project "Personal Data Manager"',
+      color: 'yellow',
+    },
+    {
       icon: <Code size={32} />,
       title: 'Code4EDTech Hackathon 2025',
       description:
