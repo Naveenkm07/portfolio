@@ -23,7 +23,7 @@ const Hero = ({ isVisible }) => {
         <div className="hero-content">
           <div className="hero-text">
             <p className="hero-greeting">Hi, I'm</p>
-            <h1 className="hero-name">Naveen Kumar K M</h1>
+            <h1 className="hero-name">Naveenkm07</h1>
             <h2 className="hero-title">
               Computer Science Engineering Student |
               <span className="gradient-text"> Software Engineer</span> |
