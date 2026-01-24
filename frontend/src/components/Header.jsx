@@ -37,7 +37,7 @@ const Header = () => {
     <header className={`header ${scrolled ? 'scrolled' : ''}`}>
       <div className="header-container">
         <div className="header-logo">
-          <span className="logo-text">Naveen Kumar</span>
+          <span className="logo-text">Naveenkm07</span>
         </div>
 
         <nav className="header-nav desktop-nav">
