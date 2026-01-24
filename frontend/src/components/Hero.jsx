@@ -58,7 +58,7 @@ const Hero = ({ isVisible }) => {
               {renderAnimatedName('NAVEEN KUMAR KM')}
             </h1>
             <h2 className="hero-title">
-              CSE student
+              Computer Science Engineering Student
               <br />
               <span className="gradient-text"> Software Engineer</span> |
               <span className="gradient-text"> AI-ML Enthusiast</span>
