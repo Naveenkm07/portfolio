@@ -70,18 +70,24 @@ const Footer = () => {
           <div className="footer-section">
             <h4 className="footer-heading">Connect</h4>
             <div className="footer-social">
-              {socialLinks.map((social, index) => (
-                <a
-                  key={index}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="footer-social-link"
-                  aria-label={social.label}
-                >
-                  {social.icon}
-                </a>
-              ))}
+              {socialLinks.map((social, index) => {
+                const isMailto =
+                  typeof social.url === 'string' && social.url.startsWith('mailto:');
+
+                return (
+                  <a
+                    key={index}
+                    href={social.url}
+                    {...(!isMailto
+                      ? { target: '_blank', rel: 'noopener noreferrer' }
+                      : {})}
+                    className="footer-social-link"
+                    aria-label={social.label}
+                  >
+                    {social.icon}
+                  </a>
+                );
+              })}
             </div>
           </div>
         </div>
