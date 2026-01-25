@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Linkedin, Mail, Heart } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 import '../styles/footer.css';
 
 const Footer = () => {
@@ -89,9 +89,6 @@ const Footer = () => {
         <div className="footer-bottom">
           <p className="footer-copyright">
             © {currentYear} Naveen Kumar K M. All rights reserved.
-          </p>
-          <p className="footer-credit">
-            Built with <Heart size={14} className="heart-icon" /> and React
           </p>
         </div>
       </div>
