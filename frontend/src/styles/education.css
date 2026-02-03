@@ -4,6 +4,10 @@
   padding: 6rem 2rem;
 }
 
+[data-theme="light"] .education {
+  background-color: #f8fafc;
+}
+
 .education-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -76,6 +80,11 @@
   backdrop-filter: blur(10px);
 }
 
+[data-theme="light"] .education-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(2, 132, 199, 0.15);
+}
+
 .education-card:hover {
   transform: translateX(-10px);
   border-color: rgba(0, 212, 255, 0.4);
@@ -105,6 +114,10 @@
   font-family: 'IBM Plex Sans', sans-serif;
 }
 
+[data-theme="light"] .education-degree {
+  color: #0f172a;
+}
+
 .education-institution {
   font-size: 1.1rem;
   color: #00d4ff;
@@ -129,6 +142,10 @@
   font-weight: 500;
 }
 
+[data-theme="light"] .education-duration {
+  color: #475569;
+}
+
 .education-score {
   background: rgba(100, 255, 218, 0.15);
   color: #64ffda;
@@ -137,6 +154,30 @@
   font-size: 0.95rem;
   font-weight: 600;
   border: 1px solid rgba(100, 255, 218, 0.2);
+}
+
+.education-score-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.education-score-link {
+  color: #00d4ff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 212, 255, 0.25);
+  background: rgba(0, 212, 255, 0.08);
+  transition: all 0.3s ease;
+}
+
+.education-score-link:hover {
+  background: rgba(0, 212, 255, 0.14);
+  border-color: rgba(0, 212, 255, 0.4);
 }
 
 @media (max-width: 768px) {

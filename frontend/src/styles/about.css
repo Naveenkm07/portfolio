@@ -4,6 +4,10 @@
   padding: 6rem 2rem;
 }
 
+[data-theme="light"] .about {
+  background-color: #f8fafc;
+}
+
 .about-container {
   max-width: 1400px;
   margin: 0 auto;
@@ -26,6 +30,10 @@
   margin-bottom: 1.5rem;
 }
 
+[data-theme="light"] .about-paragraph {
+  color: #475569;
+}
+
 .about-highlights {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -40,6 +48,11 @@
   border-radius: 12px;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
+}
+
+[data-theme="light"] .highlight-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(2, 132, 199, 0.15);
 }
 
 .highlight-card:hover {
@@ -61,10 +74,18 @@
   font-family: 'IBM Plex Sans', sans-serif;
 }
 
+[data-theme="light"] .highlight-title {
+  color: #0f172a;
+}
+
 .highlight-description {
   font-size: 1rem;
   color: #8892b0;
   line-height: 1.6;
+}
+
+[data-theme="light"] .highlight-description {
+  color: #475569;
 }
 
 @media (max-width: 768px) {
