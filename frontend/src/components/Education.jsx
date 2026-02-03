@@ -6,15 +6,18 @@ import '../styles/education.css';
 const Education = ({ isVisible }) => {
   const education = [
     {
-      degree: 'Bachelor of Engineering in Computer Science',
+      degree: 'Bachelor of Engineering in Computer Science and Engineering',
       institution: 'New Horizon College of Engineering',
       location: 'Bengaluru',
       duration: '2024 – 2027',
-      score: 'CGPA: 8.32',
+      score: 'CGPA: 8.56',
+      sgpa: 'SGPA: 9.05',
+      marksheetUrl:
+        'https://drive.google.com/file/d/19PsjwjQY1R1p0RHGV2FwbSC8ZkKmxHaG/view?usp=drive_link',
       type: 'Undergraduate',
     },
     {
-      degree: 'Diploma in Computer Science',
+      degree: 'Diploma in Computer Science and Engineering',
       institution: 'SJM Polytechnic',
       location: 'Chitradurga',
       duration: '2021 – 2024',
@@ -65,7 +68,20 @@ const Education = ({ isVisible }) => {
                 </p>
                 <div className="education-details">
                   <span className="education-duration">{edu.duration}</span>
-                  <span className="education-score">{edu.score}</span>
+                  <div className="education-score-group">
+                    <span className="education-score">{edu.score}</span>
+                    {edu.sgpa && <span className="education-score">{edu.sgpa}</span>}
+                    {edu.marksheetUrl && (
+                      <a
+                        href={edu.marksheetUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="education-score-link"
+                      >
+                        View
+                      </a>
+                    )}
+                  </div>
                 </div>
               </Card>
             </div>

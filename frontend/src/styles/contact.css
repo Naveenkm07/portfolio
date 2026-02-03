@@ -4,6 +4,10 @@
   padding: 6rem 2rem;
 }
 
+[data-theme="light"] .contact {
+  background-color: #f8fafc;
+}
+
 .contact-container {
   max-width: 1400px;
   margin: 0 auto;
@@ -30,10 +34,18 @@
   font-family: 'IBM Plex Sans', sans-serif;
 }
 
+[data-theme="light"] .contact-info-title {
+  color: #0f172a;
+}
+
 .contact-info-description {
   font-size: 1.1rem;
   color: #8892b0;
   line-height: 1.6;
+}
+
+[data-theme="light"] .contact-info-description {
+  color: #475569;
 }
 
 .contact-details {
@@ -54,11 +66,22 @@
   transition: all 0.3s ease;
 }
 
+[data-theme="light"] .contact-item {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(2, 132, 199, 0.15);
+}
+
 .contact-item:hover {
   background: rgba(10, 25, 47, 0.8);
   border-color: rgba(100, 255, 218, 0.3);
   transform: translateX(10px);
   box-shadow: 0 10px 30px rgba(100, 255, 218, 0.15);
+}
+
+[data-theme="light"] .contact-item:hover {
+  background: rgba(241, 245, 249, 1);
+  border-color: rgba(2, 132, 199, 0.25);
+  box-shadow: 0 10px 30px rgba(2, 132, 199, 0.12);
 }
 
 .contact-icon {
@@ -72,6 +95,11 @@
   color: #64ffda;
   transition: all 0.3s ease;
   flex-shrink: 0;
+}
+
+[data-theme="light"] .contact-icon {
+  background: rgba(2, 132, 199, 0.12);
+  color: #0284c7;
 }
 
 .contact-item:hover .contact-icon {
@@ -91,10 +119,18 @@
   font-weight: 500;
 }
 
+[data-theme="light"] .contact-label {
+  color: #475569;
+}
+
 .contact-value {
   font-size: 1.1rem;
   color: #ccd6f6;
   font-weight: 600;
+}
+
+[data-theme="light"] .contact-value {
+  color: #0f172a;
 }
 
 .contact-form-card {
@@ -103,6 +139,11 @@
   padding: 3rem;
   border-radius: 16px;
   backdrop-filter: blur(10px);
+}
+
+[data-theme="light"] .contact-form-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(2, 132, 199, 0.15);
 }
 
 .contact-form {
@@ -123,6 +164,10 @@
   font-weight: 600;
 }
 
+[data-theme="light"] .form-label {
+  color: #0f172a;
+}
+
 .form-input,
 .form-textarea {
   background: rgba(17, 34, 64, 0.5);
@@ -134,12 +179,26 @@
   transition: all 0.3s ease;
 }
 
+[data-theme="light"] .form-input,
+[data-theme="light"] .form-textarea {
+  background: rgba(248, 250, 252, 1);
+  border-color: rgba(2, 132, 199, 0.2);
+  color: #0f172a;
+}
+
 .form-input:focus,
 .form-textarea:focus {
   outline: none;
   border-color: #64ffda;
   background: rgba(17, 34, 64, 0.7);
   box-shadow: 0 0 0 3px rgba(100, 255, 218, 0.1);
+}
+
+[data-theme="light"] .form-input:focus,
+[data-theme="light"] .form-textarea:focus {
+  border-color: #0284c7;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
 }
 
 .form-textarea {

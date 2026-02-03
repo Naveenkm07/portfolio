@@ -27,15 +27,45 @@ const Contact = ({ isVisible }) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      const baseUrl = process.env.REACT_APP_BACKEND_URL;
+      if (!baseUrl) {
+        throw new Error('Backend URL is not configured');
+      }
+
+      const response = await fetch(`${baseUrl}/api/contact`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        let errorMessage = 'Failed to send message';
+        try {
+          const errorData = await response.json();
+          errorMessage = errorData?.detail || errorMessage;
+        } catch {
+          // ignore JSON parse errors
+        }
+        throw new Error(errorMessage);
+      }
+
       toast({
         title: 'Message Sent!',
-        description: 'Thank you for reaching out. I\'ll get back to you soon!',
+        description: "Thank you for reaching out. I'll get back to you soon!",
       });
       setFormData({ name: '', email: '', message: '' });
+    } catch (err) {
+      toast({
+        title: 'Message Failed',
+        description: err?.message || 'Something went wrong while sending your message.',
+        variant: 'destructive',
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   const contactInfo = [

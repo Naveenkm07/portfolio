@@ -5,6 +5,11 @@
   padding: 3rem 2rem 2rem;
 }
 
+[data-theme="light"] .footer {
+  background-color: #ffffff;
+  border-top: 1px solid rgba(2, 132, 199, 0.15);
+}
+
 .footer-container {
   max-width: 1400px;
   margin: 0 auto;
@@ -38,11 +43,19 @@
   max-width: 400px;
 }
 
+[data-theme="light"] .footer-description {
+  color: #475569;
+}
+
 .footer-heading {
   font-size: 1.2rem;
   font-weight: 600;
   color: #ccd6f6;
   margin-bottom: 0.5rem;
+}
+
+[data-theme="light"] .footer-heading {
+  color: #0f172a;
 }
 
 .footer-links {
@@ -56,6 +69,10 @@
   text-decoration: none;
   font-size: 0.95rem;
   transition: all 0.2s ease;
+}
+
+[data-theme="light"] .footer-link {
+  color: #475569;
 }
 
 .footer-link:hover {

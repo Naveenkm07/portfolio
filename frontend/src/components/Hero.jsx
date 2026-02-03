@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Button } from './ui/button';
-import { Github, Linkedin, Download, ChevronRight } from 'lucide-react';
+import { Github, Instagram, Linkedin, Download, ChevronRight } from 'lucide-react';
 import '../styles/hero.css';
 
 const Hero = ({ isVisible }) => {
@@ -97,6 +97,14 @@ const Hero = ({ isVisible }) => {
                 className="social-link"
               >
                 <Github size={24} />
+              </a>
+              <a
+                href="https://instagram.com/naveen.techie"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-link"
+              >
+                <Instagram size={24} />
               </a>
               <a
                 href="https://www.linkedin.com/in/naveenkm07/"
