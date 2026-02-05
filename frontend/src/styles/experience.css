@@ -83,13 +83,45 @@
 
 [data-theme="light"] .timeline-card {
   background: rgba(255, 255, 255, 0.9);
-  border-color: rgba(2, 132, 199, 0.15);
+  border-color: rgba(75, 45, 127, 0.15);
+}
+
+[data-theme="light"] .marker-icon {
+  background: linear-gradient(135deg, #4B2D7F 0%, #B2368A 100%);
+  color: #ffffff;
+  box-shadow: 0 8px 25px rgba(75, 45, 127, 0.22);
+}
+
+[data-theme="light"] .marker-line {
+  background: linear-gradient(180deg, rgba(75, 45, 127, 0.25), transparent);
+}
+
+[data-theme="light"] .timeline-company {
+  color: #B2368A;
+}
+
+[data-theme="light"] .timeline-badge {
+  color: #4B2D7F;
+}
+
+[data-theme="light"] .certificate-link {
+  color: #4B2D7F;
+}
+
+[data-theme="light"] .certificate-link:hover {
+  color: #B2368A;
+  background: rgba(75, 45, 127, 0.08);
 }
 
 .timeline-card:hover {
   transform: translateX(10px);
   border-color: rgba(100, 255, 218, 0.4);
   box-shadow: 0 20px 50px rgba(100, 255, 218, 0.15);
+}
+
+[data-theme="light"] .timeline-card:hover {
+  border-color: rgba(178, 54, 138, 0.25);
+  box-shadow: 0 20px 50px rgba(75, 45, 127, 0.12);
 }
 
 .timeline-header {
@@ -159,6 +191,12 @@
   border: 1px solid rgba(100, 255, 218, 0.2);
 }
 
+[data-theme="light"] .timeline-type {
+  background: rgba(75, 45, 127, 0.08);
+  color: #4B2D7F;
+  border-color: rgba(75, 45, 127, 0.2);
+}
+
 .timeline-achievements {
   list-style: none;
   display: grid;
@@ -184,6 +222,10 @@
   color: #64ffda;
   font-weight: bold;
   font-size: 1.1rem;
+}
+
+[data-theme="light"] .timeline-achievements li::before {
+  color: #4B2D7F;
 }
 
 @media (max-width: 768px) {

@@ -31,7 +31,7 @@
 
 [data-theme="light"] .skill-card {
   background: rgba(255, 255, 255, 0.9);
-  border-color: rgba(2, 132, 199, 0.15);
+  border-color: rgba(75, 45, 127, 0.15);
 }
 
 @keyframes fadeInUp {
@@ -51,6 +51,11 @@
   box-shadow: 0 20px 50px rgba(100, 255, 218, 0.2);
 }
 
+[data-theme="light"] .skill-card:hover {
+  border-color: rgba(178, 54, 138, 0.25);
+  box-shadow: 0 20px 50px rgba(75, 45, 127, 0.14);
+}
+
 .skill-header {
   display: flex;
   align-items: center;
@@ -66,7 +71,7 @@
 }
 
 [data-theme="light"] .skill-icon {
-  color: #0284c7;
+  color: #4B2D7F;
 }
 
 .skill-category {
@@ -98,14 +103,18 @@
 }
 
 [data-theme="light"] .skill-tag {
-  background: rgba(2, 132, 199, 0.08);
-  color: #0284c7;
-  border-color: rgba(2, 132, 199, 0.2);
+  background: rgba(75, 45, 127, 0.08);
+  color: #4B2D7F;
+  border-color: rgba(75, 45, 127, 0.2);
 }
 
 .skill-tag:hover {
   background: rgba(100, 255, 218, 0.2);
   transform: translateY(-2px);
+}
+
+[data-theme="light"] .skill-tag:hover {
+  background: rgba(75, 45, 127, 0.14);
 }
 
 @media (max-width: 768px) {

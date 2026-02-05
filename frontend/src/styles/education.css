@@ -5,7 +5,7 @@
 }
 
 [data-theme="light"] .education {
-  background-color: #f8fafc;
+  background-color: #f6f7ff;
 }
 
 .education-container {
@@ -71,6 +71,10 @@
   margin-top: 1rem;
 }
 
+[data-theme="light"] .edu-marker-line {
+  background: linear-gradient(180deg, rgba(75, 45, 127, 0.25), transparent);
+}
+
 .education-card {
   background: linear-gradient(145deg, rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.5));
   border: 1px solid rgba(0, 212, 255, 0.15);
@@ -82,13 +86,34 @@
 
 [data-theme="light"] .education-card {
   background: rgba(255, 255, 255, 0.9);
-  border-color: rgba(2, 132, 199, 0.15);
+  border-color: rgba(75, 45, 127, 0.15);
+}
+
+[data-theme="light"] .edu-marker-icon {
+  background: linear-gradient(135deg, #4B2D7F 0%, #B2368A 100%);
+  color: #ffffff;
+  box-shadow: 0 8px 25px rgba(75, 45, 127, 0.22);
+}
+
+[data-theme="light"] .education-type {
+  background: rgba(75, 45, 127, 0.08);
+  color: #4B2D7F;
+  border-color: rgba(75, 45, 127, 0.18);
+}
+
+[data-theme="light"] .education-institution {
+  color: #B2368A;
 }
 
 .education-card:hover {
   transform: translateX(-10px);
   border-color: rgba(0, 212, 255, 0.4);
   box-shadow: 0 20px 50px rgba(0, 212, 255, 0.15);
+}
+
+[data-theme="light"] .education-card:hover {
+  border-color: rgba(178, 54, 138, 0.25);
+  box-shadow: 0 20px 50px rgba(75, 45, 127, 0.12);
 }
 
 .education-type {
@@ -103,6 +128,12 @@
   border: 1px solid rgba(0, 212, 255, 0.2);
   text-transform: uppercase;
   letter-spacing: 0.5px;
+}
+
+[data-theme="light"] .education-type {
+  background: rgba(75, 45, 127, 0.08);
+  color: #4B2D7F;
+  border-color: rgba(75, 45, 127, 0.18);
 }
 
 .education-degree {
@@ -125,6 +156,10 @@
   margin-bottom: 1rem;
 }
 
+[data-theme="light"] .education-institution {
+  color: #B2368A;
+}
+
 .education-details {
   display: flex;
   justify-content: space-between;
@@ -134,6 +169,10 @@
   margin-top: 1rem;
   padding-top: 1rem;
   border-top: 1px solid rgba(100, 255, 218, 0.1);
+}
+
+[data-theme="light"] .education-details {
+  border-top-color: rgba(75, 45, 127, 0.12);
 }
 
 .education-duration {
@@ -156,6 +195,12 @@
   border: 1px solid rgba(100, 255, 218, 0.2);
 }
 
+[data-theme="light"] .education-score {
+  background: rgba(75, 45, 127, 0.08);
+  color: #4B2D7F;
+  border-color: rgba(75, 45, 127, 0.2);
+}
+
 .education-score-group {
   display: flex;
   align-items: center;
@@ -175,9 +220,20 @@
   transition: all 0.3s ease;
 }
 
+[data-theme="light"] .education-score-link {
+  color: #B2368A;
+  border-color: rgba(178, 54, 138, 0.28);
+  background: rgba(178, 54, 138, 0.08);
+}
+
 .education-score-link:hover {
   background: rgba(0, 212, 255, 0.14);
   border-color: rgba(0, 212, 255, 0.4);
+}
+
+[data-theme="light"] .education-score-link:hover {
+  background: rgba(178, 54, 138, 0.12);
+  border-color: rgba(178, 54, 138, 0.45);
 }
 
 @media (max-width: 768px) {

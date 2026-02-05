@@ -7,7 +7,7 @@
 
 [data-theme="light"] .footer {
   background-color: #ffffff;
-  border-top: 1px solid rgba(2, 132, 199, 0.15);
+  border-top: 1px solid rgba(75, 45, 127, 0.15);
 }
 
 .footer-container {
@@ -34,6 +34,10 @@
   color: #64ffda;
   margin-bottom: 0.5rem;
   font-family: 'IBM Plex Sans', sans-serif;
+}
+
+[data-theme="light"] .footer-title {
+  color: #4B2D7F;
 }
 
 .footer-description {
@@ -73,6 +77,21 @@
 
 [data-theme="light"] .footer-link {
   color: #475569;
+}
+
+[data-theme="light"] .footer-link:hover {
+  color: #B2368A;
+}
+
+[data-theme="light"] .footer-social-link {
+  border-color: rgba(75, 45, 127, 0.35);
+  color: #4B2D7F;
+}
+
+[data-theme="light"] .footer-social-link:hover {
+  background: rgba(75, 45, 127, 0.08);
+  border-color: rgba(75, 45, 127, 0.6);
+  box-shadow: 0 8px 20px rgba(75, 45, 127, 0.18);
 }
 
 .footer-link:hover {
@@ -115,6 +134,10 @@
   gap: 1rem;
 }
 
+[data-theme="light"] .footer-bottom {
+  border-top-color: rgba(75, 45, 127, 0.12);
+}
+
 .footer-copyright,
 .footer-credit {
   color: #8892b0;
@@ -122,6 +145,11 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+
+[data-theme="light"] .footer-copyright,
+[data-theme="light"] .footer-credit {
+  color: #4B5563;
 }
 
 .heart-icon {

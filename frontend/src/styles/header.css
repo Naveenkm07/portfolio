@@ -12,8 +12,8 @@
 }
 
 [data-theme="light"] .header {
-  background-color: rgba(248, 250, 252, 0.95);
-  border-bottom: 1px solid rgba(2, 132, 199, 0.2);
+  background-color: rgba(246, 247, 255, 0.95);
+  border-bottom: 1px solid rgba(75, 45, 127, 0.18);
 }
 
 .header.scrolled {
@@ -22,7 +22,7 @@
 }
 
 [data-theme="light"] .header.scrolled {
-  background-color: rgba(248, 250, 252, 0.98);
+  background-color: rgba(246, 247, 255, 0.98);
   box-shadow: 0 4px 20px rgba(15, 23, 42, 0.08);
 }
 
@@ -43,7 +43,7 @@
 }
 
 [data-theme="light"] .header-logo {
-  color: #0284c7;
+  color: #4B2D7F;
 }
 
 .logo-text {
@@ -53,6 +53,10 @@
 
 .logo-text:hover {
   color: #00d4ff;
+}
+
+[data-theme="light"] .logo-text:hover {
+  color: #B2368A;
 }
 
 .header-nav {
@@ -80,7 +84,7 @@
 }
 
 [data-theme="light"] .nav-link:hover {
-  color: #0284c7;
+  color: #B2368A;
 }
 
 .nav-link::after {
@@ -95,7 +99,7 @@
 }
 
 [data-theme="light"] .nav-link::after {
-  background-color: #0284c7;
+  background-color: #4B2D7F;
 }
 
 .nav-link:hover::after {
@@ -109,6 +113,11 @@
   padding: 0.5rem 1.5rem;
   border: none;
   transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+[data-theme="light"] .contact-btn {
+  background: linear-gradient(135deg, #4B2D7F 0%, #B2368A 100%);
+  color: #ffffff;
 }
 
 .contact-btn:hover {
@@ -128,7 +137,7 @@
 }
 
 [data-theme="light"] .mobile-menu-btn {
-  color: #0284c7;
+  color: #4B2D7F;
 }
 
 .mobile-menu-btn:hover {
@@ -136,7 +145,7 @@
 }
 
 [data-theme="light"] .mobile-menu-btn:hover {
-  color: #0284c7;
+  color: #B2368A;
 }
 
 .mobile-nav {
@@ -161,7 +170,7 @@
   }
 
   [data-theme="light"] .mobile-nav {
-    background-color: rgba(248, 250, 252, 0.98);
+    background-color: rgba(246, 247, 255, 0.98);
   }
 
   .mobile-nav-link {
@@ -176,7 +185,7 @@
 
   [data-theme="light"] .mobile-nav-link {
     color: #0f172a;
-    border-bottom-color: rgba(2, 132, 199, 0.15);
+    border-bottom-color: rgba(75, 45, 127, 0.15);
   }
 
   .mobile-nav-link:hover {
@@ -184,7 +193,12 @@
   }
 
   [data-theme="light"] .mobile-nav-link:hover {
-    color: #0284c7;
+    color: #B2368A;
+  }
+
+  [data-theme="light"] .mobile-contact-btn {
+    background: linear-gradient(135deg, #4B2D7F 0%, #B2368A 100%);
+    color: #ffffff;
   }
 
   .mobile-contact-btn {

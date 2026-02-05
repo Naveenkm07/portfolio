@@ -15,7 +15,7 @@
 }
 
 [data-theme="light"] .App {
-  background-color: #f8fafc;
+  background-color: #f6f7ff;
 }
 
 .portfolio {
@@ -55,7 +55,7 @@ section.visible {
 }
 
 [data-theme="light"] .section-title {
-  color: #0f172a;
+  color: #1f2340;
 }
 
 .title-underline {
@@ -66,6 +66,10 @@ section.visible {
   border-radius: 2px;
 }
 
+[data-theme="light"] .title-underline {
+  background: linear-gradient(90deg, #4B2D7F 0%, #B2368A 100%);
+}
+
 .section-subtitle {
   font-size: 1.1rem;
   color: #8892b0;
@@ -74,7 +78,7 @@ section.visible {
 }
 
 [data-theme="light"] .section-subtitle {
-  color: #475569;
+  color: #4B5563;
 }
 
 /* Gradient Text */
@@ -85,7 +89,18 @@ section.visible {
   background-clip: text;
 }
 
+[data-theme="light"] .gradient-text {
+  background: linear-gradient(135deg, #4B2D7F 0%, #B2368A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 .highlight {
   color: #64ffda;
   font-weight: 600;
+}
+
+[data-theme="light"] .highlight {
+  color: #B2368A;
 }

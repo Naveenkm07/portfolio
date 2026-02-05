@@ -32,7 +32,7 @@
 
 [data-theme="light"] .achievement-card {
   background: rgba(255, 255, 255, 0.9);
-  border-color: rgba(2, 132, 199, 0.15);
+  border-color: rgba(75, 45, 127, 0.15);
 }
 
 @keyframes fadeInScale {
@@ -114,6 +114,10 @@
 .achievement-card.yellow {
   border-color: rgba(255, 223, 0, 0.4);
   background: linear-gradient(145deg, rgba(17, 34, 64, 0.7), rgba(17, 34, 64, 0.4));
+}
+
+[data-theme="light"] .achievement-card.yellow {
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .achievement-card.yellow:hover {
