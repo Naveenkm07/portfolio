@@ -3,7 +3,7 @@ import { Card } from './ui/card';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
-import { Mail, Phone, Linkedin, Github, Send } from 'lucide-react';
+import { Mail, Linkedin, Github, Send } from 'lucide-react';
 import { useToast } from '../hooks/use-toast';
 import '../styles/contact.css';
 
@@ -76,12 +76,6 @@ const Contact = ({ isVisible }) => {
       link: 'mailto:kmnaveenkm85@gmail.com',
     },
     {
-      icon: <Phone size={24} />,
-      label: 'Phone',
-      value: '+91 9591502209',
-      link: 'tel:+919591502209',
-    },
-    {
       icon: <Linkedin size={24} />,
       label: 'LinkedIn',
       value: 'naveenkm07',
@@ -118,7 +112,7 @@ const Contact = ({ isVisible }) => {
                 <a
                   key={index}
                   href={info.link}
-                  target={info.label === 'Email' || info.label === 'Phone' ? '_self' : '_blank'}
+                  target={info.label === 'Email' ? '_self' : '_blank'}
                   rel="noopener noreferrer"
                   className="contact-item"
                 >
