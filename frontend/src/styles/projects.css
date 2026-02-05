@@ -5,7 +5,7 @@
 }
 
 [data-theme="light"] .projects {
-  background-color: #f8fafc;
+  background-color: #f6f7ff;
 }
 
 .projects-container {
@@ -30,7 +30,26 @@
 
 [data-theme="light"] .project-card {
   background: rgba(255, 255, 255, 0.9);
-  border-color: rgba(2, 132, 199, 0.15);
+  border-color: rgba(75, 45, 127, 0.15);
+}
+
+[data-theme="light"] .project-subtitle {
+  color: #B2368A;
+}
+
+[data-theme="light"] .tech-badge {
+  background: rgba(75, 45, 127, 0.08);
+  color: #4B2D7F;
+  border-color: rgba(75, 45, 127, 0.18);
+}
+
+[data-theme="light"] .project-features {
+  background: rgba(75, 45, 127, 0.04);
+  border-color: rgba(75, 45, 127, 0.12);
+}
+
+[data-theme="light"] .features-list li::before {
+  color: #4B2D7F;
 }
 
 @keyframes fadeInUp {
@@ -48,6 +67,11 @@
   transform: translateY(-12px);
   border-color: rgba(100, 255, 218, 0.4);
   box-shadow: 0 25px 60px rgba(100, 255, 218, 0.15);
+}
+
+[data-theme="light"] .project-card:hover {
+  border-color: rgba(178, 54, 138, 0.25);
+  box-shadow: 0 25px 60px rgba(75, 45, 127, 0.12);
 }
 
 .project-header {

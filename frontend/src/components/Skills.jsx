@@ -15,7 +15,7 @@ const Skills = ({ isVisible }) => {
     {
       category: 'Programming Languages',
       icon: <Code2 size={28} />,
-      skills: ['C', 'C++', 'Python', 'SQL'],
+      skills: ['Java', 'SQL'],
     },
     {
       category: 'Web & Backend',

@@ -37,12 +37,12 @@
 
 /* Light theme styles */
 [data-theme="light"] .theme-toggle {
-  background: rgba(0, 168, 232, 0.1);
-  border-color: rgba(0, 168, 232, 0.3);
-  color: #00a8e8;
+  background: rgba(75, 45, 127, 0.08);
+  border-color: rgba(75, 45, 127, 0.22);
+  color: #4B2D7F;
 }
 
 [data-theme="light"] .theme-toggle:hover {
-  background: rgba(0, 168, 232, 0.2);
-  border-color: rgba(0, 168, 232, 0.5);
+  background: rgba(178, 54, 138, 0.12);
+  border-color: rgba(178, 54, 138, 0.35);
 }

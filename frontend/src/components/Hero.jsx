@@ -73,7 +73,7 @@ const Hero = ({ isVisible }) => {
                 href="https://drive.google.com/drive/folders/1XSkdAaQa5doJbSOJBw-uU4fQ80bWRU0L"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background bg-gradient-to-r from-blue-500 to-green-500 text-white hover:from-blue-600 hover:to-green-600 h-12 px-6 py-2 primary-btn"
+                className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background bg-gradient-to-r from-[#4B2D7F] to-[#B2368A] text-white hover:from-[#3A1E66] hover:to-[#9B2D76] h-12 px-6 py-2 primary-btn"
               >
                 <Download size={20} className="mr-2" />
                 View Resume
