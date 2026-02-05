@@ -16,7 +16,7 @@ const Achievements = ({ isVisible }) => {
       icon: <Trophy size={32} />,
       title: '2nd Place – Mini Project Competition',
       description:
-        'Awarded at New Horizon College of Engineering for the project "Personal Data Manager"',
+        'Awarded by Dr. Manjunatha S., Principal, NHCE for the project "Personal Data Manager"',
       color: 'yellow',
     },
     {
@@ -25,6 +25,13 @@ const Achievements = ({ isVisible }) => {
       description:
         'Participated in 24-hour national-level AI-EdTech challenge by Innomatics Research Labs, developing ML-powered education solutions',
       color: 'blue',
+    },
+    {
+      icon: <Users size={32} />,
+      title: 'NIKSHATRA – E SUMMIT 2025',
+      description:
+        'Participated in a 24-hour National-Level Hackathon conducted at Bangalore Institute of Technology.',
+      color: 'purple',
     },
     {
       icon: <Users size={32} />,
