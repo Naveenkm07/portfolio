@@ -1,0 +1,62 @@
+.splash-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0a192f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  overflow: hidden;
+}
+
+[data-theme="light"] .splash-container {
+  background-color: #f8fafc;
+}
+
+.splash-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.splash-text-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.splash-name {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 3rem;
+  font-weight: 800;
+  color: #ccd6f6;
+  letter-spacing: 2px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+[data-theme="light"] .splash-name {
+  color: #0f172a;
+}
+
+.splash-underline {
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #64ffda, #00d4ff);
+  border-radius: 2px;
+}
+
+[data-theme="light"] .splash-underline {
+  background: linear-gradient(90deg, #4B2D7F, #B2368A);
+}
+
+@media (max-width: 768px) {
+  .splash-name {
+    font-size: 2rem;
+  }
+}

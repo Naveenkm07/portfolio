@@ -2,6 +2,7 @@ import React from 'react';
 import { Card } from './ui/card';
 import { Button } from './ui/button';
 import { Github, ExternalLink } from 'lucide-react';
+import Tilt from 'react-parallax-tilt';
 import '../styles/projects.css';
 
 const Projects = ({ isVisible }) => {
@@ -66,58 +67,68 @@ const Projects = ({ isVisible }) => {
 
         <div className="projects-grid">
           {projects.map((project, index) => (
-            <Card
+            <Tilt 
               key={index}
-              className="project-card"
+              glareEnable={true}
+              glareMaxOpacity={0.15}
+              glareColor="#ffffff"
+              glarePosition="all"
+              scale={1.02}
+              transitionSpeed={1500}
+              tiltMaxAngleX={10}
+              tiltMaxAngleY={10}
               style={{ animationDelay: `${index * 0.2}s` }}
+              className="project-tilt-wrapper"
             >
-              <div className="project-header">
-                <div>
-                  <h3 className="project-title">{project.title}</h3>
-                  <p className="project-subtitle">{project.subtitle}</p>
+              <Card className="project-card h-full">
+                <div className="project-header">
+                  <div>
+                    <h3 className="project-title">{project.title}</h3>
+                    <p className="project-subtitle">{project.subtitle}</p>
+                  </div>
                 </div>
-              </div>
 
-              <p className="project-description">{project.description}</p>
+                <p className="project-description">{project.description}</p>
 
-              <div className="project-tech">
-                {project.techStack.map((tech, idx) => (
-                  <span key={idx} className="tech-badge">
-                    {tech}
-                  </span>
-                ))}
-              </div>
-
-              <div className="project-features">
-                <h4 className="features-title">Key Features:</h4>
-                <ul className="features-list">
-                  {project.features.map((feature, idx) => (
-                    <li key={idx}>{feature}</li>
+                <div className="project-tech">
+                  {project.techStack.map((tech, idx) => (
+                    <span key={idx} className="tech-badge">
+                      {tech}
+                    </span>
                   ))}
-                </ul>
-              </div>
+                </div>
 
-              <div className="project-links">
-                <Button
-                  variant="default"
-                  size="sm"
-                  onClick={() => window.open(project.github, '_blank')}
-                >
-                  <Github size={16} />
-                  View Code
-                </Button>
-                {project.demo && (
+                <div className="project-features">
+                  <h4 className="features-title">Key Features:</h4>
+                  <ul className="features-list">
+                    {project.features.map((feature, idx) => (
+                      <li key={idx}>{feature}</li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="project-links">
                   <Button
-                    variant="outline"
+                    variant="default"
                     size="sm"
-                    onClick={() => window.open(project.demo, '_blank')}
+                    onClick={() => window.open(project.github, '_blank')}
                   >
-                    <ExternalLink size={16} />
-                    Live Demo
+                    <Github size={16} />
+                    View Code
                   </Button>
-                )}
-              </div>
-            </Card>
+                  {project.demo && (
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={() => window.open(project.demo, '_blank')}
+                    >
+                      <ExternalLink size={16} />
+                      Live Demo
+                    </Button>
+                  )}
+                </div>
+              </Card>
+            </Tilt>
           ))}
         </div>
       </div>

@@ -9,6 +9,7 @@ import {
   BookOpen,
 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import Tilt from 'react-parallax-tilt';
 import '../styles/skills.css';
 
 const Skills = ({ isVisible }) => {
@@ -86,23 +87,33 @@ const Skills = ({ isVisible }) => {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           {skillCategories.map((category, index) => (
-            <Card
+            <Tilt
               key={index}
-              className="skill-card"
+              glareEnable={true}
+              glareMaxOpacity={0.15}
+              glareColor="#ffffff"
+              glarePosition="all"
+              scale={1.05}
+              transitionSpeed={1500}
+              tiltMaxAngleX={15}
+              tiltMaxAngleY={15}
               style={{ animationDelay: `${index * 0.1}s` }}
+              className="skill-tilt-wrapper"
             >
-              <div className="skill-header">
-                <div className="skill-icon">{category.icon}</div>
-                <h3 className="skill-category">{category.category}</h3>
-              </div>
-              <div className="skill-list">
-                {category.skills.map((skill, idx) => (
-                  <span key={idx} className="skill-tag">
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </Card>
+              <Card className="skill-card h-full">
+                <div className="skill-header">
+                  <div className="skill-icon">{category.icon}</div>
+                  <h3 className="skill-category">{category.category}</h3>
+                </div>
+                <div className="skill-list">
+                  {category.skills.map((skill, idx) => (
+                    <span key={idx} className="skill-tag">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </Card>
+            </Tilt>
           ))}
         </motion.div>
       </div>

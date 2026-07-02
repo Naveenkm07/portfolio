@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card } from './ui/card';
 import { Briefcase, Award, ExternalLink } from 'lucide-react';
+import { motion } from 'framer-motion';
 import '../styles/experience.css';
 
 const Experience = ({ isVisible }) => {
@@ -46,53 +47,61 @@ const Experience = ({ isVisible }) => {
           </p>
         </div>
 
-        <div className="timeline">
-          {experiences.map((exp, index) => (
-            <div
-              key={index}
-              className="timeline-item"
-              style={{ animationDelay: `${index * 0.2}s` }}
-            >
-              <div className="timeline-marker">
-                <div className="marker-icon">
-                  <Briefcase size={20} />
+        <div className="timeline-wrapper">
+          <motion.div 
+            className="timeline-glowing-path"
+            initial={{ height: 0 }}
+            whileInView={{ height: '100%' }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 1.5, ease: "easeInOut" }}
+          />
+          <div className="timeline">
+            {experiences.map((exp, index) => (
+              <div
+                key={index}
+                className="timeline-item"
+                style={{ animationDelay: `${index * 0.2}s` }}
+              >
+                <div className="timeline-marker">
+                  <div className="marker-icon">
+                    <Briefcase size={20} />
+                  </div>
                 </div>
-                <div className="marker-line"></div>
+
+                <Card className="timeline-card">
+                  <div className="timeline-header">
+                    <div>
+                      <h3 className="timeline-role">{exp.role}</h3>
+                      <p className="timeline-company">{exp.company}</p>
+                    </div>
+                    <div className="timeline-badge">
+                      {exp.icon}
+                      <span className="timeline-duration">{exp.duration}</span>
+                      {exp.certificateLink && (
+                        <a
+                          href={exp.certificateLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="certificate-link"
+                          title="View Certificate"
+                        >
+                          <ExternalLink size={16} />
+                        </a>
+                      )}
+                    </div>
+                  </div>
+
+                  <span className="timeline-type">{exp.type}</span>
+
+                  <ul className="timeline-achievements">
+                    {exp.achievements.map((achievement, idx) => (
+                      <li key={idx}>{achievement}</li>
+                    ))}
+                  </ul>
+                </Card>
               </div>
-
-              <Card className="timeline-card">
-                <div className="timeline-header">
-                  <div>
-                    <h3 className="timeline-role">{exp.role}</h3>
-                    <p className="timeline-company">{exp.company}</p>
-                  </div>
-                  <div className="timeline-badge">
-                    {exp.icon}
-                    <span className="timeline-duration">{exp.duration}</span>
-                    {exp.certificateLink && (
-                      <a
-                        href={exp.certificateLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="certificate-link"
-                        title="View Certificate"
-                      >
-                        <ExternalLink size={16} />
-                      </a>
-                    )}
-                  </div>
-                </div>
-
-                <span className="timeline-type">{exp.type}</span>
-
-                <ul className="timeline-achievements">
-                  {exp.achievements.map((achievement, idx) => (
-                    <li key={idx}>{achievement}</li>
-                  ))}
-                </ul>
-              </Card>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

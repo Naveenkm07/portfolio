@@ -13,12 +13,36 @@
   margin: 0 auto;
 }
 
+.timeline-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-glowing-path {
+  position: absolute;
+  top: 0;
+  left: 30px; /* Center of the 60px marker icon */
+  width: 4px;
+  background: linear-gradient(180deg, #64ffda, #00d4ff, transparent);
+  box-shadow: 0 0 15px #64ffda, 0 0 30px #00d4ff;
+  border-radius: 2px;
+  z-index: 1;
+  transform: translateX(-50%);
+}
+
+[data-theme="light"] .timeline-glowing-path {
+  background: linear-gradient(180deg, #4B2D7F, #B2368A, transparent);
+  box-shadow: 0 0 15px #4B2D7F, 0 0 30px #B2368A;
+}
+
 .timeline {
   position: relative;
   display: flex;
   flex-direction: column;
   gap: 3rem;
   margin-top: 3rem;
+  z-index: 2;
 }
 
 .timeline-item {

@@ -3,6 +3,7 @@ import { Button } from './ui/button';
 import { Github, Instagram, Linkedin, Download, ChevronRight } from 'lucide-react';
 import Tilt from 'react-parallax-tilt';
 import { motion, AnimatePresence } from 'framer-motion';
+import ParticlesBackground from './ParticlesBackground';
 import '../styles/hero.css';
 
 const titles = [
@@ -50,6 +51,7 @@ const Hero = ({ isVisible }) => {
   return (
     <section id="hero" className={`hero ${isVisible ? 'visible' : ''}`}>
       <div className="hero-background">
+        <ParticlesBackground />
         <div className="gradient-orb orb-1"></div>
         <div className="gradient-orb orb-2"></div>
         <div className="grid-overlay"></div>
