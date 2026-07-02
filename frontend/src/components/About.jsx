@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card } from './ui/card';
 import { Code, Brain, Cloud, Lightbulb } from 'lucide-react';
+import { motion } from 'framer-motion';
 import '../styles/about.css';
 
 const About = ({ isVisible }) => {
@@ -35,7 +36,13 @@ const About = ({ isVisible }) => {
           <div className="title-underline"></div>
         </div>
 
-        <div className="about-content">
+        <motion.div 
+          className="about-content"
+          initial={{ opacity: 0, y: 50, filter: 'blur(10px)' }}
+          whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
           <div className="about-text">
             <p className="about-paragraph">
               I'm a Computer Science Engineering student at{' '}
@@ -66,7 +73,7 @@ const About = ({ isVisible }) => {
               </Card>
             ))}
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

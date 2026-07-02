@@ -8,6 +8,7 @@ import {
   TestTube,
   BookOpen,
 } from 'lucide-react';
+import { motion } from 'framer-motion';
 import '../styles/skills.css';
 
 const Skills = ({ isVisible }) => {
@@ -77,7 +78,13 @@ const Skills = ({ isVisible }) => {
           </p>
         </div>
 
-        <div className="skills-grid">
+        <motion.div 
+          className="skills-grid"
+          initial={{ opacity: 0, y: 50, filter: 'blur(10px)' }}
+          whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
           {skillCategories.map((category, index) => (
             <Card
               key={index}
@@ -97,7 +104,7 @@ const Skills = ({ isVisible }) => {
               </div>
             </Card>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

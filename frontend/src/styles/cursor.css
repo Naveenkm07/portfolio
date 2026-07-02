@@ -1,0 +1,52 @@
+@media (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
+}
+
+.custom-cursor-wrapper {
+  pointer-events: none;
+  z-index: 9999;
+}
+
+@media (pointer: coarse) {
+  .custom-cursor-wrapper {
+    display: none;
+  }
+}
+
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  border: 2px solid #00d4ff;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+}
+
+[data-theme="light"] .custom-cursor {
+  border-color: #4B2D7F;
+  mix-blend-mode: normal;
+}
+
+.custom-cursor-follower {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  background-color: #64ffda;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+}
+
+[data-theme="light"] .custom-cursor-follower {
+  background-color: #B2368A;
+  mix-blend-mode: normal;
+}

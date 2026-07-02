@@ -1,11 +1,20 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Button } from './ui/button';
 import { Github, Instagram, Linkedin, Download, ChevronRight } from 'lucide-react';
+import Tilt from 'react-parallax-tilt';
+import { motion, AnimatePresence } from 'framer-motion';
 import '../styles/hero.css';
+
+const titles = [
+  "Software Engineer",
+  "AI-ML Enthusiast",
+  "Full Stack Developer",
+  "Tech Innovator"
+];
 
 const Hero = ({ isVisible }) => {
   const nameRef = useRef(null);
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [titleIndex, setTitleIndex] = useState(0);
 
   useEffect(() => {
     if (isVisible && nameRef.current) {
@@ -17,14 +26,10 @@ const Hero = ({ isVisible }) => {
   }, [isVisible]);
 
   useEffect(() => {
-    const handleMouseMove = (e) => {
-      const x = (e.clientX / window.innerWidth - 0.5) * 2;
-      const y = (e.clientY / window.innerHeight - 0.5) * 2;
-      setMousePosition({ x, y });
-    };
-
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
+    const intervalId = setInterval(() => {
+      setTitleIndex((prev) => (prev + 1) % titles.length);
+    }, 3000);
+    return () => clearInterval(intervalId);
   }, []);
 
   const scrollToProjects = () => {
@@ -57,13 +62,25 @@ const Hero = ({ isVisible }) => {
             <h1 className="hero-name" ref={nameRef}>
               {renderAnimatedName('NAVEEN KUMAR KM')}
             </h1>
-            <h2 className="hero-title">
-              Computer Science Engineering Student
+            <div className="hero-title-container">
+              <span className="hero-title-static">Computer Science Engineering Student</span>
               <br />
-              <span className="gradient-text"> Software Engineer</span> |
-              <span className="gradient-text"> AI-ML Enthusiast</span>
-            </h2>
-            <p className="hero-description">
+              <div style={{ height: '32px', position: 'relative', overflow: 'hidden', marginTop: '8px' }}>
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={titleIndex}
+                    initial={{ y: 30, opacity: 0, rotateX: -90 }}
+                    animate={{ y: 0, opacity: 1, rotateX: 0 }}
+                    exit={{ y: -30, opacity: 0, rotateX: 90 }}
+                    transition={{ duration: 0.5, ease: "easeInOut" }}
+                    style={{ position: 'absolute', transformOrigin: 'center' }}
+                  >
+                    <span className="gradient-text text-xl font-bold">{titles[titleIndex]}</span>
+                  </motion.div>
+                </AnimatePresence>
+              </div>
+            </div>
+            <p className="hero-description mt-6">
               Building scalable software solutions and intelligent systems.
               Passionate about solving real-world problems through code and innovation.
             </p>
@@ -118,12 +135,14 @@ const Hero = ({ isVisible }) => {
           </div>
 
           <div className="hero-image">
-            <div 
+            <Tilt 
+              tiltMaxAngleX={12} 
+              tiltMaxAngleY={12} 
+              perspective={1000} 
+              scale={1.05} 
+              transitionSpeed={2000} 
+              gyroscope={true}
               className="image-wrapper"
-              style={{
-                transform: `perspective(1000px) rotateY(${mousePosition.x * 10}deg) rotateX(${-mousePosition.y * 10}deg)`,
-                transition: 'transform 0.1s ease-out'
-              }}
             >
               <img
                 src="/phot.jpg"
@@ -131,7 +150,7 @@ const Hero = ({ isVisible }) => {
                 className="profile-image"
               />
               <div className="image-border"></div>
-            </div>
+            </Tilt>
           </div>
         </div>
       </div>
