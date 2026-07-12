@@ -122,5 +122,5 @@ While this is a personal portfolio, suggestions for code improvements, performan
 
 ---
 <div align="center">
-  <i>Built with ❤️ and React.js</i>
+  <i>Built with ❤️ by Naveen Kumar K M</i>
 </div>
