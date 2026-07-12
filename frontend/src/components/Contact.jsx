@@ -28,35 +28,34 @@ const Contact = ({ isVisible }) => {
     setIsSubmitting(true);
 
     try {
-      const baseUrl = process.env.REACT_APP_BACKEND_URL;
-      if (!baseUrl) {
-        throw new Error('Backend URL is not configured');
-      }
+      // 1. We use FormData for Web3Forms
+      const submissionData = new FormData();
+      
+      // 2. Replace this with your actual Web3Forms access key
+      submissionData.append("access_key", "606da72a-a792-4035-a9af-8b7b7a9deb84");
+      
+      submissionData.append("name", formData.name);
+      submissionData.append("email", formData.email);
+      submissionData.append("message", formData.message);
 
-      const response = await fetch(`${baseUrl}/api/contact`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
+      // 3. Send directly to Web3Forms API
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: submissionData
       });
 
-      if (!response.ok) {
-        let errorMessage = 'Failed to send message';
-        try {
-          const errorData = await response.json();
-          errorMessage = errorData?.detail || errorMessage;
-        } catch {
-          // ignore JSON parse errors
-        }
-        throw new Error(errorMessage);
-      }
+      const data = await response.json();
 
-      toast({
-        title: 'Message Sent!',
-        description: "Thank you for reaching out. I'll get back to you soon!",
-      });
-      setFormData({ name: '', email: '', message: '' });
+      if (data.success) {
+        toast({
+          title: 'Message Sent!',
+          description: "Thank you for reaching out. I'll get back to you soon!",
+        });
+        // Clear the form
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        throw new Error(data.message || 'Failed to send message');
+      }
     } catch (err) {
       toast({
         title: 'Message Failed',
