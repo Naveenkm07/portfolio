@@ -6,6 +6,20 @@ import { motion, AnimatePresence } from 'framer-motion';
 import ParticlesBackground from './ParticlesBackground';
 import '../styles/hero.css';
 
+const LeetCodeIcon = ({ size = 24, className = "" }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    className={className}
+  >
+    <path d="M16.102 17.93l-2.697 2.607c-.466.467-1.111.662-1.823.662s-1.357-.195-1.824-.662l-4.332-4.363c-.467-.467-.702-1.15-.702-1.863s.235-1.357.702-1.824l4.319-4.38c.467-.467 1.112-.662 1.824-.662s1.357.195 1.824.662l2.706 2.589c.516.516.534 1.356.02 1.872-.515.515-1.356.533-1.872.02l-2.332-2.24c-.163-.163-.38-.258-.61-.258-.228 0-.446.095-.61.258l-4.323 4.38c-.163.163-.258.38-.258.61s.095.447.258.61l4.333 4.363c.163.163.38.258.61.258.228 0 .446-.095.61-.258l2.323-2.24c.516-.516 1.356-.534 1.872-.02.516.515.534 1.357.02 1.872z" />
+    <path d="M20.811 13.01H10.666c-.74 0-1.336-.595-1.336-1.336s.596-1.336 1.336-1.336h10.145c.74 0 1.336.596 1.336 1.336s-.596 1.336-1.336 1.336z" />
+  </svg>
+);
+
 const titles = [
   "Software Engineer",
   "AI-ML Enthusiast",
@@ -132,6 +146,14 @@ const Hero = ({ isVisible }) => {
                 className="social-link"
               >
                 <Linkedin size={24} />
+              </a>
+              <a
+                href="https://leetcode.com/u/Naveenkm07/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-link"
+              >
+                <LeetCodeIcon size={24} />
               </a>
             </div>
           </div>
