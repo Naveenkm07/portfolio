@@ -10,8 +10,8 @@ const Education = ({ isVisible }) => {
       institution: 'New Horizon College of Engineering',
       location: 'Bengaluru',
       duration: '2024 – 2027',
-      score: 'CGPA: 8.56',
-      sgpa: 'SGPA: 9.05',
+      score: 'CGPA: 8.66',
+      sgpa: 'SGPA: 8.95',
       marksheetUrl:
         'https://drive.google.com/file/d/19PsjwjQY1R1p0RHGV2FwbSC8ZkKmxHaG/view?usp=drive_link',
       type: 'Undergraduate',
