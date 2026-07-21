@@ -45,7 +45,7 @@ code {
 }
 
 ::-webkit-scrollbar-track {
-    background: #00a8e8;
+    background: #0a192f;
 }
 
 [data-theme="light"] ::-webkit-scrollbar-track {
@@ -53,7 +53,7 @@ code {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #00a8e8;
+    background: #233554;
     border-radius: 6px;
 }
 
@@ -62,7 +62,7 @@ code {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #00a8e8;
+    background: #64ffda;
 }
 
 [data-theme="light"] ::-webkit-scrollbar-thumb:hover {
