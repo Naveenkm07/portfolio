@@ -7,6 +7,14 @@ import '../styles/certifications.css';
 const Certifications = ({ isVisible }) => {
   const certifications = [
     {
+      title: 'Software Engineering Job Simulation',
+      organization: 'JPMorgan Chase & Co. / Forage',
+      date: 'August 23rd, 2025',
+      description: 'Completed practical tasks in Project Setup, Kafka Integration, H2 Integration, REST API Integration, and REST API Controller.',
+      imageUrl: '/jpmorgan-cert.jpg',
+      link: '#',
+    },
+    {
       title: 'NPTEL - Fundaments of Algorithm:design and Analysis',
       organization: 'Indian Institute of Technology Kharagpur',
       date: 'Jan 2024 - Feb 2024',
@@ -28,14 +36,6 @@ const Certifications = ({ isVisible }) => {
       date: '2023',
       description: 'Completed hands-on internship at HAL gaining practical exposure to aerospace systems and industrial engineering workflows.',
       imageUrl: '/hal-cert.jpg',
-      link: '#',
-    },
-    {
-      title: 'Placeholder Certificate 4',
-      organization: 'Placeholder Org',
-      date: 'Mar 2024',
-      description: 'Add your fourth certificate description here.',
-      imageUrl: '/placeholder-cert.jpg',
       link: '#',
     },
     {
