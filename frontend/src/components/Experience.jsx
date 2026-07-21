@@ -11,7 +11,7 @@ const Experience = ({ isVisible }) => {
       company: 'Ember Quest',
       duration: '4 Months',
       type: 'Internship',
-      certificateLink: 'https://www.linkedin.com/posts/naveenkm07_ai-artificialintelligence-machinelearning-activity-7334888242959261696-1jju?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADxXAKQBuxdej-hWcN1MR2E4zBAfjZ1XBGI',
+      certificateLink: '/EmberQuest.jpg',
       achievements: [
         'Applied machine learning algorithms for real-world problem-solving and data analysis',
         'Gained hands-on experience in model development, training, and deployment workflows',
@@ -24,6 +24,7 @@ const Experience = ({ isVisible }) => {
       company: 'Crystallize Technologies',
       duration: '3 Months',
       type: 'Industry Training',
+      certificateLink: '/Crystallize.jpg',
       achievements: [
         'Completed comprehensive AI/ML training covering advanced ML and deep learning concepts',
         'Worked on industry-relevant projects and best practices in software development',
