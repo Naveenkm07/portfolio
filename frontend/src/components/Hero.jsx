@@ -75,7 +75,7 @@ const Hero = ({ isVisible }) => {
           <div className="hero-text">
             <p className="hero-greeting">Hi, I'm</p>
             <h1 className="hero-name" ref={nameRef}>
-              {renderAnimatedName('NAVEEN KUMAR KM')}
+              {renderAnimatedName('NAVEEN KUMAR K M')}
             </h1>
             <div className="hero-title-container">
               <span className="hero-title-static">Computer Science Engineering Student</span>
@@ -158,12 +158,12 @@ const Hero = ({ isVisible }) => {
           </div>
 
           <div className="hero-image">
-            <Tilt 
-              tiltMaxAngleX={12} 
-              tiltMaxAngleY={12} 
-              perspective={1000} 
-              scale={1.05} 
-              transitionSpeed={2000} 
+            <Tilt
+              tiltMaxAngleX={12}
+              tiltMaxAngleY={12}
+              perspective={1000}
+              scale={1.05}
+              transitionSpeed={2000}
               gyroscope={true}
               className="image-wrapper"
             >
