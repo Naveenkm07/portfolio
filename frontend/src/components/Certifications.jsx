@@ -30,6 +30,30 @@ const Certifications = ({ isVisible }) => {
       imageUrl: '/hal-cert.jpg',
       link: '#',
     },
+    {
+      title: 'Placeholder Certificate 4',
+      organization: 'Placeholder Org',
+      date: 'Mar 2024',
+      description: 'Add your fourth certificate description here.',
+      imageUrl: '/placeholder-cert.jpg',
+      link: '#',
+    },
+    {
+      title: 'Placeholder Certificate 5',
+      organization: 'Placeholder Org',
+      date: 'Apr 2024',
+      description: 'Add your fifth certificate description here.',
+      imageUrl: '/placeholder-cert.jpg',
+      link: '#',
+    },
+    {
+      title: 'Placeholder Certificate 6',
+      organization: 'Placeholder Org',
+      date: 'May 2024',
+      description: 'Add your sixth certificate description here.',
+      imageUrl: '/placeholder-cert.jpg',
+      link: '#',
+    },
   ];
 
   return (
