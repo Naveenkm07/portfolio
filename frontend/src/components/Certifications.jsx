@@ -47,12 +47,12 @@ const Certifications = ({ isVisible }) => {
       link: 'https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/ovyvuqqNRQKBjNxbj/3xnZEj9kfpoQKW885_ovyvuqqNRQKBjNxbj_jDyiSWadubo7fjRun_1755970293495_completion_certificate.pdf',
     },
     {
-      title: 'Placeholder Certificate 6',
-      organization: 'Placeholder Org',
-      date: 'May 2024',
-      description: 'Add your sixth certificate description here.',
-      imageUrl: '/placeholder-cert.jpg',
-      link: '#',
+      title: 'Solutions Architecture Job Simulation',
+      organization: 'AWS / Forage',
+      date: 'August 23rd, 2025',
+      description: 'Completed practical tasks in: Designing a simple, scalable, hosting architecture.',
+      imageUrl: '/aws-cert.jpg',
+      link: 'https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/pmnMSL4QiQ9JCgE3W/kkE9HyeNcw6rwCRGw_pmnMSL4QiQ9JCgE3W_jDyiSWadubo7fjRun_1755966547332_completion_certificate.pdf',
     },
   ];
 
