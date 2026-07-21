@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import ParticlesBackground from '../components/ParticlesBackground';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import About from '../components/About';
@@ -36,6 +37,7 @@ const Portfolio = () => {
 
   return (
     <div className="portfolio">
+      <ParticlesBackground />
       <Header />
       <Hero isVisible={isVisible.hero} />
       <About isVisible={isVisible.about} />

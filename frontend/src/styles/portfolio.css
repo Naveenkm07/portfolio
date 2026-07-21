@@ -40,6 +40,21 @@ section.visible {
   transform: translateY(0);
 }
 
+/* Semi-transparent section backgrounds for Particles */
+section:nth-of-type(odd) {
+  background-color: rgba(10, 25, 47, 0.85) !important;
+}
+section:nth-of-type(even) {
+  background-color: rgba(17, 34, 64, 0.85) !important;
+}
+
+[data-theme="light"] section:nth-of-type(odd) {
+  background-color: rgba(255, 255, 255, 0.85) !important;
+}
+[data-theme="light"] section:nth-of-type(even) {
+  background-color: rgba(246, 247, 255, 0.85) !important;
+}
+
 /* Common Section Styles */
 .section-header {
   text-align: center;
