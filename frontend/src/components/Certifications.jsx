@@ -39,12 +39,12 @@ const Certifications = ({ isVisible }) => {
       link: '#',
     },
     {
-      title: 'Placeholder Certificate 5',
-      organization: 'Placeholder Org',
-      date: 'Apr 2024',
-      description: 'Add your fifth certificate description here.',
-      imageUrl: '/placeholder-cert.jpg',
-      link: '#',
+      title: 'Developer and Technology Job Simulation',
+      organization: 'Accenture / Forage',
+      date: 'August 23rd, 2025',
+      description: 'Completed tasks: Discover Career Opportunities in Technology, SDLC, Waterfall and Agile, STLC, Algorithmic Thinking, and Code Debugging.',
+      imageUrl: '/accenture-cert.jpg',
+      link: 'https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/ovyvuqqNRQKBjNxbj/3xnZEj9kfpoQKW885_ovyvuqqNRQKBjNxbj_jDyiSWadubo7fjRun_1755970293495_completion_certificate.pdf',
     },
     {
       title: 'Placeholder Certificate 6',
