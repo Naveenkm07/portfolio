@@ -21,7 +21,7 @@ const Education = ({ isVisible }) => {
       institution: 'SJM Polytechnic',
       location: 'Chitradurga',
       duration: '2021 – 2024',
-      score: '82.12%',
+      score: '81.70%',
       type: 'Diploma',
     },
     {
