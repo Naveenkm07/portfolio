@@ -5,6 +5,7 @@ import About from '../components/About';
 import Skills from '../components/Skills';
 import Projects from '../components/Projects';
 import Experience from '../components/Experience';
+import Certifications from '../components/Certifications';
 import Education from '../components/Education';
 import Achievements from '../components/Achievements';
 import Contact from '../components/Contact';
@@ -41,6 +42,7 @@ const Portfolio = () => {
       <Skills isVisible={isVisible.skills} />
       <Projects isVisible={isVisible.projects} />
       <Experience isVisible={isVisible.experience} />
+      <Certifications isVisible={isVisible.certifications} />
       <Education isVisible={isVisible.education} />
       <Achievements isVisible={isVisible.achievements} />
       <Contact isVisible={isVisible.contact} />
