@@ -12,7 +12,7 @@ const Certifications = ({ isVisible }) => {
       date: 'August 23rd, 2025',
       description: 'Completed practical tasks in Project Setup, Kafka Integration, H2 Integration, REST API Integration, and REST API Controller.',
       imageUrl: '/jpmorgan-cert.jpg',
-      link: '#',
+      link: 'https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Sj7temL583QAYpHXD/E6McHJDKsQYh79moz_Sj7temL583QAYpHXD_jDyiSWadubo7fjRun_1755974360980_completion_certificate.pdf',
     },
     {
       title: 'NPTEL - Fundaments of Algorithm:design and Analysis',
